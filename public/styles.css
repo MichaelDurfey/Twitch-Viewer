@@ -12,29 +12,29 @@ background-repeat: no-repeat;
 }
 
 /*Navbar*/
-.dropdown-menu>li>a:hover {
-    background-color: #337ab7!important;
+nav .header {
+    position: fixed;
+    color: #fff;
+    font-size: 2.1rem;
+    padding-left: 5px;
+    text-align: center;
 }
 
-.well {
-  padding: 0px!important;
+nav {
+  background-color: rgba(0,0,0, 0)!important;
+  border: none;
+ box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0);
+ 
 }
 
-.well > nav {
-  align-items: center;
+
+
+
+!important;
 }
 
-.navbar {
-  width: 100%;
-  margin-bottom: 0px!important;
-}
+.nav-wrapped {
 
-.dropdown-menu {
-  align-items: right;
-}
-
-.navbar-nav {
-  float: right!important;
 }
 
 /*Navbar end*/

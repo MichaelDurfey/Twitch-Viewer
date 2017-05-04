@@ -7,21 +7,24 @@
   <script type="text/javascript" src = "/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src = "/index.js"></script>
   <script src = "/bootstrap/dist/js/bootstrap.js"></script>
+  <link type = "text/css" rel="stylesheet" href="/materialize-css/dist/css/materialize.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css"> -->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/styles.css">
-  <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
+<script src = "/materialize-css/dist/js/materialize.js"></script>
 
   <div class = "container-fluid mainContainer" id = "grad">
     <div class = "channelViewerLeft text-center">
-    <nav class="navbar navbar-inverse">
+    <!-- <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand">Twitch Viewer</a>
         </div>
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropDownActiveItem">
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#" id = "all">All</a></li>
@@ -31,7 +34,23 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
+    <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#">All</a></li>
+  <li><a href="#">Online</a></li>
+  <li class="divider"></li>
+  <li><a href="#">Offline</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper transparent">
+    <a href="#!" class="header center-align">Twitch Viewer</a>
+    <ul class="right hide-on-med-and-down">
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button btn-floating pulse" href="#!" data-activates="dropdown1"><i class="material-icons right">menu</i></a></li>
+    </ul>
+  </div>
+</nav>
+        
       <div class = "channels text-center" id = "channels">
         <div class = "fcc" id = "channel">
 
