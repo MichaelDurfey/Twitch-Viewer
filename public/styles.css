@@ -91,8 +91,31 @@ padding-top: 5px;
   font-family: 'Roboto'
 }
 
+.description {
+text-align: center;
+
+}
+
+.preview {
+  width: 50%;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.streamType {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
 .streaming {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
 }
 
 .badge {
@@ -108,7 +131,8 @@ padding-top: 5px;
 .badge:hover {
   text-shadow: 1px 2px #4c4c4c;
   text-decoration: underline;
-  .collapsible-body{
+
+  .collapsible-body {
     display: none;
   }
 }

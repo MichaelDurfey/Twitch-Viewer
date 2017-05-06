@@ -35,20 +35,21 @@ $.when(
   function() {
     $(".fccli").child().removeClass("collapsible-header").child().removeClass("collapsible-body");
   }
-  );a
+  );
   
 
   if (fcc[1]["stream"] === null) {
     console.log("FCC not streaming")
-    var stream = `<div class = "streaming"><span class = "badge right" onclick= "location.href='https://www.twitch.tv/freecodecamp'">Offline</span></div>`;
+    var stream = `<div class = "streaming"><span class = "badge">Offline</span></div>`;
     $(".fccli").html(`
         <div class = "fcc channel collapsible-header" id = "channel" >  
 
         </div>
         <div class = "collapsible-body">
-            <span>${fcc[0]["display_name"]} is currently Offline. 
-            <br> Click here to check out ${fcc[0]["display_name"]}'s Twitch Channel
+            <span class = "description center">${fcc[0]["display_name"]} is currently Offline. 
+            <br>
             </span>
+            <a class="waves-effect waves-light btn" href ="${fcc[0]["url"]}">Channel</a> 
         </div>
     `)
   }
@@ -76,23 +77,24 @@ $.when(
     ${stream}
     `)
 
-  //FreeCodeCamp//
+//END FreeCodeCamp//
+
+//Music4Studying//
 if (music[1]["stream"] === null) {
     console.log("Music not Streaming")
     var stream = `<div class = "streaming right "><span class = "badge">Offline</span></div>`;
   $(".musicli").html(`
-    <div class = "music channel collapsible-header" id = "channel" >          
+          <div class = "music channel collapsible-header" id = "channel" >         
           </div>
           <div class = "collapsible-body">
-            <span>${music[0]["display_name"]} is currently Offline. 
-            <br> Click here to check out ${music[0]["display_name"]}'s Twitch Channel
+            <span>${music[0]["display_name"]} is currently Offline.
             </span>
           </div>
     `)
   }
   else {
     stream = `
-    <div class = "streaming ">
+    <div class = "streaming right">
       <span class = "new badge" data-badge-caption="">Now Streaming!
       </span>
     </div>
@@ -101,11 +103,15 @@ if (music[1]["stream"] === null) {
       <div class = "music4Studying channel collapsible-header" id = "channel" >          
       </div>
       <div class = "collapsible-body">
-        <span>${music[0]["display_name"]} is live! 
-        <br> Click here to check out ${music[0]["display_name"]}'s Twitch Channel
+        <span class = "collapsibleText">
+          <div class = "image">
+            ${music[0]["display_name"]} is live!
+            <img class="preview" src="${music[1]["stream"]["preview"]["large"]}" alt = "preview picture"></img>
+          </div>
         </span>
+        <a class = "waves-effect waves-light btn" href = "${music[1]["stream"]["game"]}"></a>
       </div>
-      `)
+    `)
   }
 
   $(".music4Studying").html(`
@@ -113,14 +119,19 @@ if (music[1]["stream"] === null) {
       <div class="name text-center">
         ${music[0]["display_name"]}
       </div>
+      <div class = "streamType">
+            <p>
+            ${music[1]["stream"]["game"]}</p>
+      </div> 
     ${stream}
-    `)
-  //Music4Studying//
+  `)
+// END Music4Studying//
 
+//BEGIN TWITCH//
   if (twitch[1]["stream"] === null) {
     console.log("twitch not streaming")
     var stream = `
-    <div class = "streaming right ">
+    <div class = "streaming">
       <span class = "badge">
         Offline
       </span>
@@ -133,7 +144,7 @@ if (music[1]["stream"] === null) {
           <br> Click here to check out ${twitch[0]["display_name"]}'s Twitch Channel
         </span>
       </div>
-      `)
+    `)
   }
   else {
     stream = `
@@ -158,9 +169,11 @@ if (music[1]["stream"] === null) {
     <div class="name text-center">
       ${twitch[0]["display_name"]}
     </div>
-      ${stream}
+    ${stream}
   `)
-  //twitch//
+//END Twitch//
+
+  //BEGIN FOOD//
   if (food[1]["stream"] === null) {
     console.log("food not streaming")
     var stream = `
@@ -203,6 +216,6 @@ if (music[1]["stream"] === null) {
     </div>
       ${stream}
     `)
-  //food//
+  //END FOOD//
   });
 });
