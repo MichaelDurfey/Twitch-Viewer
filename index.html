@@ -17,54 +17,41 @@
 
   <div class = "container-fluid mainContainer" id = "grad">
     <div class = "channelViewerLeft text-center">
-    <!-- <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand">Twitch Viewer</a>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#">All</a></li>
+        <li><a href="#">Online</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Offline</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper transparent">
+          <a href="#!" class="header center-align">Twitch Viewer</a>
+          <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-button btn-floating pulse" href="#!" data-activates="dropdown1"><i class="material-icons right">menu</i></a></li>
+          </ul>
         </div>
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropDownActiveItem">
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#" id = "all">All</a></li>
-              <li><a href="#" id = "online">Online</a></li>
-              <li><a href="#" id = "offline">Offline</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
-    <ul id="dropdown1" class="dropdown-content">
-  <li><a href="#">All</a></li>
-  <li><a href="#">Online</a></li>
-  <li class="divider"></li>
-  <li><a href="#">Offline</a></li>
-</ul>
-<nav>
-  <div class="nav-wrapper transparent">
-    <a href="#!" class="header center-align">Twitch Viewer</a>
-    <ul class="right hide-on-med-and-down">
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button btn-floating pulse" href="#!" data-activates="dropdown1"><i class="material-icons right">menu</i></a></li>
-    </ul>
-  </div>
-</nav>
-        
-      <div class = "channels text-center" id = "channels">
-        <div class = "fcc" id = "channel">
-
-        </div>
-        <div class = "music4Studying" id = "channel">
-
-        </div>
-        <div class = "twitch" id = "channel">
-          
-        </div>
-        <div class = "food" id = "channel">
-
-        </div>
-      </div>
+      </nav>
+        <!-- onclick= "location.href='https://www.twitch.tv/freecodecamp'" --> 
+        <!-- onclick= "location.href='https://www.twitch.tv/music4studying'"  -->
+        <!-- onclick= "location.href='https://www.twitch.tv/twitch'" -->
+        <!-- onclick= "location.href='https://www.twitch.tv/food'" -->
+      <ul class="channels text-center collapsible" data-collapsible="accordion" id = "channels">
+        <li class = "fccli">
+        </li>
+        <li class = "musicli">
+          <div class = "music4Studying channel collapsible-header" id = "channel">       
+          </div>
+        </li>
+        <li class = "twitchli">
+          <div class = "twitch channel collapsible-header" id = "channel"> 
+          </div>
+        </li>
+        <li class = "foodli">
+          <div class = "food channel collapsible-header" id = "channel">
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
   
