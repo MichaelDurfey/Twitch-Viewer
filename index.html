@@ -18,10 +18,11 @@
   <div class = "container-fluid mainContainer" id = "grad">
     <div class = "channelViewerLeft text-center">
       <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#">All</a></li>
-        <li><a href="#">Online</a></li>
+        <li><a href="#" id = "all">All</a></li>
         <li class="divider"></li>
-        <li><a href="#">Offline</a></li>
+        <li><a href="#" id = "online">Online</a></li>
+        <li class="divider"></li>
+        <li><a href="#" id = "offline">Offline</a></li>
       </ul>
       <nav>
         <div class="nav-wrapper transparent">
@@ -32,24 +33,17 @@
           </ul>
         </div>
       </nav>
-        <!-- onclick= "location.href='https://www.twitch.tv/freecodecamp'" --> 
-        <!-- onclick= "location.href='https://www.twitch.tv/music4studying'"  -->
-        <!-- onclick= "location.href='https://www.twitch.tv/twitch'" -->
-        <!-- onclick= "location.href='https://www.twitch.tv/food'" -->
       <ul class="channels text-center collapsible" data-collapsible="accordion" id = "channels">
-        <li class = "fccli">
+        <li class = "fccli li" id = "li">
         </li>
-        <li class = "musicli">
-          <div class = "music4Studying channel collapsible-header" id = "channel">       
-          </div>
+        <li class = "musicli li" id = "li">
+
         </li>
-        <li class = "twitchli">
-          <div class = "twitch channel collapsible-header" id = "channel"> 
-          </div>
-        </li>
-        <li class = "foodli">
-          <div class = "food channel collapsible-header" id = "channel">
-          </div>
+        <li class = "twitchli li" id = "li">
+
+        </li> 
+        <li class = "foodli li" id = "li">
+
         </li>
       </ul>
     </div>

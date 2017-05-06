@@ -69,9 +69,12 @@ padding-top: 5px;
 
 #channels {
 
-  width: 50vmax;
+  width: 40vmax;
 }
 
+.hidden {
+  display: none;
+}
 
 #channel {
   height: 50px;
@@ -91,13 +94,20 @@ padding-top: 5px;
   font-family: 'Roboto'
 }
 
-.description {
-text-align: center;
+.collapsible-body {
+  text-align: center;
+}
 
+.btn {
+  text-align: center;
 }
 
 .preview {
   width: 50%;
+}
+
+.hidden {
+  display: none;
 }
 
 .image {
@@ -113,28 +123,13 @@ text-align: center;
 }
 
 .streaming {
-  display: flex;
-  flex-direction: column;
-  align-items: right;
+  width: 100%;
 }
 
-.badge {
-  right: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: right;
-  justify-content: center;
-      color: #b9b9b9!important;
-      z-index: 2;
-}
 
 .badge:hover {
   text-shadow: 1px 2px #4c4c4c;
   text-decoration: underline;
-
-  .collapsible-body {
-    display: none;
-  }
 }
 
 
