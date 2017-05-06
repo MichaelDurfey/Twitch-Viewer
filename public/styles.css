@@ -72,6 +72,12 @@ padding-top: 5px;
   width: 40vmax;
 }
 
+@media (max-width: 450px) {
+  #channels{
+    width: 100%;
+  }
+}
+
 .hidden {
   display: none;
 }
