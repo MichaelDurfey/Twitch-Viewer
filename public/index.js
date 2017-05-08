@@ -79,7 +79,7 @@ $.when(
         console.log("Music not Streaming")
         var stream = `<div class = "streaming offline" id = "streaming"><span class = "badge">Offline</span></div>`;
       $(".musicli").html(`
-              <div class = "music channel collapsible-header" id = "channel" >         
+              <div class = "music4Studying channel collapsible-header" id = "channel" >         
               </div>
               <div class = "collapsible-body">
                 <span>${music[0]["display_name"]} is currently Offline.

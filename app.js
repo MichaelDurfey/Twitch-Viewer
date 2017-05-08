@@ -27,7 +27,7 @@ app.get('/fccChannel', function(req, res){
         callback(err, body);
       }
     );
-  }
+  };
   const urls= [
     "https://wind-bow.glitch.me/twitch-api/channels/freecodecamp",
     "https://wind-bow.glitch.me/twitch-api/streams/freecodecamp",
@@ -53,7 +53,7 @@ app.get('/music4Studying', function(req, res){
         callback(err, body);
       }
     );
-  }
+  };
   const urls= [
     "https://wind-bow.glitch.me/twitch-api/channels/music4Studying",
     "https://wind-bow.glitch.me/twitch-api/streams/music4Studying",
@@ -79,7 +79,7 @@ app.get('/twitch', function(req, res){
         callback(err, body);
       }
     );
-  }
+  };
   const urls= [
     "https://wind-bow.glitch.me/twitch-api/channels/twitch",
     "https://wind-bow.glitch.me/twitch-api/streams/twitch",
@@ -105,7 +105,7 @@ app.get('/food', function(req, res){
         callback(err, body);
       }
     );
-  }
+  };
   const urls= [
     "https://wind-bow.glitch.me/twitch-api/channels/food",
     "https://wind-bow.glitch.me/twitch-api/streams/food",
