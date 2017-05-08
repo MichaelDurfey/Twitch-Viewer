@@ -16,111 +16,108 @@ var port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
-var data1 = [];
-var data2 = [];
-var data3 = [];
-var data4 = [];
-
 app.get('/fccChannel', function(req, res){ 
   function httpGet(url, callback) {
-  const options = {
-    url :  url,
-    json : true
-  };
-  request(options,
-    function(err, res, body) {
-      callback(err, body);
+    const options = {
+      url :  url,
+      json : true
+    };
+    request(options,
+      function(err, res, body) {
+        callback(err, body);
+      }
+    );
+  }
+  const urls= [
+    "https://wind-bow.glitch.me/twitch-api/channels/freecodecamp",
+    "https://wind-bow.glitch.me/twitch-api/streams/freecodecamp",
+  ];
+  async.map(urls, httpGet, function (err, response){
+    if (err){
+      console.log(err);
     }
-  );
-}
-const urls= [
-  "https://wind-bow.glitch.me/twitch-api/channels/freecodecamp",
-  "https://wind-bow.glitch.me/twitch-api/streams/freecodecamp",
-];
-async.map(urls, httpGet, function (err, res){
-  if (err) return console.log(err);
-  data1.push(res)
-});
-res.send(data1);
-data1 = [];
+    else {
+      res.send(response)
+    }      
+  });
 });
 
 app.get('/music4Studying', function(req, res){ 
-  let data = [];
- function httpGet(url, callback) {
-  const options = {
-    url :  url,
-    json : true
-  };
-  request(options,
-    function(err, res, body) {
-      callback(err, body);
+  function httpGet(url, callback) {
+    const options = {
+      url :  url,
+      json : true
+    };
+    request(options,
+      function(err, res, body) {
+        callback(err, body);
+      }
+    );
+  }
+  const urls= [
+    "https://wind-bow.glitch.me/twitch-api/channels/music4Studying",
+    "https://wind-bow.glitch.me/twitch-api/streams/music4Studying",
+  ];
+  async.map(urls, httpGet, function (err, response){
+    if (err) {
+      console.log(err)
     }
-  );
-}
-const urls= [
-  "https://wind-bow.glitch.me/twitch-api/channels/music4Studying",
-  "https://wind-bow.glitch.me/twitch-api/streams/music4Studying",
-];
-async.map(urls, httpGet, function (err, res){
-  if (err) return console.log(err);
-
-  data2.push(res)
-});
-res.send(data2);
-data2 = [];
-});
-
-app.get('/twitch', function(req, res){ 
-  let data = [];
- function httpGet(url, callback) {
-  const options = {
-    url :  url,
-    json : true
-  };
-  request(options,
-    function(err, res, body) {
-      callback(err, body);
+    else {
+      res.send(response)
     }
-  );
-}
-const urls= [
-  "https://wind-bow.glitch.me/twitch-api/channels/twitch",
-  "https://wind-bow.glitch.me/twitch-api/streams/twitch",
-];
-async.map(urls, httpGet, function (err, res){
-  if (err) return console.log(err);
-
-  data3.push(res)
+  });
 });
-res.send(data3);
-data3 = []
+
+app.get('/twitch', function(req, res){
+  function httpGet(url, callback) {
+    const options = {
+      url :  url,
+      json : true
+    };
+    request(options,
+      function(err, res, body) {
+        callback(err, body);
+      }
+    );
+  }
+  const urls= [
+    "https://wind-bow.glitch.me/twitch-api/channels/twitch",
+    "https://wind-bow.glitch.me/twitch-api/streams/twitch",
+  ];
+  async.map(urls, httpGet, function (err, response){
+    if (err){
+      console.log(err)
+    }
+    else {
+      res.send(response)
+    }
+  });
 });
 
 app.get('/food', function(req, res){ 
-let data = [];
-function httpGet(url, callback) {
-  const options = {
-    url :  url,
-    json : true
-  };
-  request(options,
-    function(err, res, body) {
-      callback(err, body);
+  function httpGet(url, callback) {
+    const options = {
+      url :  url,
+      json : true
+    };
+    request(options,
+      function(err, res, body) {
+        callback(err, body);
+      }
+    );
+  }
+  const urls= [
+    "https://wind-bow.glitch.me/twitch-api/channels/food",
+    "https://wind-bow.glitch.me/twitch-api/streams/food",
+  ];
+  async.map(urls, httpGet, function (err, response){
+    if (err){ 
+      console.log(err)
     }
-  );
-}
-const urls= [
-  "https://wind-bow.glitch.me/twitch-api/channels/food",
-  "https://wind-bow.glitch.me/twitch-api/streams/food",
-];
-async.map(urls, httpGet, function (err, res){
-  if (err) return console.log(err);
-
-  data4.push(res)
-});
-res.send(data4);
-data4 = [];
+    else {
+      res.send(response)
+    }
+  });
 });
 
 
