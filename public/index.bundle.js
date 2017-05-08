@@ -8,20 +8,14 @@ $('document').ready(function () {
 
   var data = [];
   $.when($.get("/fccChannel", function (d) {
-    console.log(d);
     data.push(d);
   }), $.get("/music4Studying", function (d) {
-    console.log(d);
     data.push(d);
   }), $.get("/twitch", function (d) {
-    console.log(d);
     data.push(d);
   }), $.get("/food", function (d) {
-    console.log(d);
     data.push(d);
   })).done(function (d) {
-    console.log(d);
-    console.log(data);
     var fcc = data[0][0];
     var music = data[1][0];
     var twitch = data[2][0];
@@ -46,7 +40,6 @@ $('document').ready(function () {
 
     //Music4Studying//
     if (music[1]["stream"] === null) {
-      console.log("Music not Streaming");
       var stream = '<div class = "streaming offline" id = "streaming"><span class = "badge">Offline</span></div>';
       $(".musicli").html('\n          <div class = "music channel collapsible-header" id = "channel" >         \n          </div>\n          <div class = "collapsible-body">\n            <span>' + music[0]["display_name"] + ' is currently Offline.\n            </span>\n          </div>\n    ');
     } else {
@@ -59,7 +52,6 @@ $('document').ready(function () {
 
     //BEGIN TWITCH//
     if (twitch[1]["stream"] === null) {
-      console.log("twitch not streaming");
       var stream = '\n    <div class = "streaming offline" id = "streaming">\n      <span class = "badge">\n        Offline\n      </span>\n    </div>';
       $(".twitchli").html('\n      <div class = "twitch channel collapsible-header" id = "channel" >          \n      </div>\n      <div class = "collapsible-body">\n        <span class = "description center"><span style = "font-family: roboto; font-size: 15px; font-weight: bold">' + twitch[0]["display_name"] + ' is currently Offline.</span> \n            <br>\n            <br>\n            Last Stream:<br>\n            ' + twitch[0]["status"] + '\n            <br>\n            <br>\n        </span>\n            <a class="waves-effect waves-light btn" href ="' + twitch[0]["url"] + '">Channel</a> \n      </div>\n    ');
     } else {
@@ -71,7 +63,6 @@ $('document').ready(function () {
 
     //BEGIN FOOD//
     if (food[1]["stream"] === null) {
-      console.log("food not streaming");
       var stream = '\n      <div class = "streaming offline" id = "streaming">\n        <span class = "badge">\n          Offline\n        </span>\n      </div>';
       $(".foodli").html('\n      <div class = "food channel collapsible-header" id = "channel" >          \n      </div>\n      <div class = "collapsible-body">\n       <span class = "description center"><span style = "font-family: roboto; font-size: 15px; font-weight: bold">' + food[0]["display_name"] + ' is currently Offline.</span> \n            <br>\n            <br>\n            Last Stream:<br>\n            ' + food[0]["status"] + '\n            <br>\n            <br>\n        </span>\n            <a class="waves-effect waves-light btn" href ="' + food[0]["url"] + '">Channel</a> \n      </div>\n    ');
     } else {
@@ -84,7 +75,6 @@ $('document').ready(function () {
 
   $("#all").click(function () {
     $(".channels").children().removeClass("hidden");
-    console.log("clicked");
   });
   $("#online").click(function () {
     if ($(".streaming").hasClass("offline") === true) {
