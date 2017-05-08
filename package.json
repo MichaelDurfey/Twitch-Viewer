@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel --presets es2015 public/index.js -o public/index.bundle.js",
-    "start": "babel && node app.js"
+    "start": "npm run babel && node app.js"
   },
   "repository": {
     "type": "git",
