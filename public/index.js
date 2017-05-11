@@ -59,6 +59,8 @@ $.when(
           <br>
           Status:<br>
           ${fcc[1]["stream"]["channel"]["status"]}
+          <br>
+          <br>
           </span>
           <a class="waves-effect waves-light btn" href ="${fcc[1]["stream"]["channel"]["url"]}">Channel</a>
         </div>
